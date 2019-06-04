@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Result.css";
 
 class Result extends React.Component {
     constructor(props){
@@ -13,8 +14,8 @@ class Result extends React.Component {
     }
     render(){
         return (
-            <div>
-                {this.state.result}
+            <div className="result">
+                <input type="text" value={this.state.result} />
             </div>
         );
     }
