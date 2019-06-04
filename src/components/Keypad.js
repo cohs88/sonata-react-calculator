@@ -1,9 +1,10 @@
 import React from 'react';
 import Key from './Key';
+import "./Keypad.css";
 
 const Keypad  = (props) =>{
     return (
-        <div>
+        <div className="keys-grid">
             <Key text="1" type="numeric"/>
             <Key text="2" type="numeric"/>
             <Key text="3" type="numeric"/>

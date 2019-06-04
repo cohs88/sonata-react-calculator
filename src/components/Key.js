@@ -19,7 +19,7 @@ import "./Key.css";
 const Key = (props) => {
     return (
         <div className={`key-display ${props.type}`}>
-            {props.text}
+            <input type="button" value={props.text} />
         </div>
     );
 };

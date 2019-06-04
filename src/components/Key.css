@@ -1,15 +1,24 @@
 .key-display{
     color:white;
+    float:left;
+    width:65px;
+    height:50px;
+    margin:5px;
 }
-.key-display.numeric{
+.key-display input{
+    border: none;
+    width:100%;
+    height:100%;
+}
+.key-display.numeric input{
     background-color:green; 
 }
-.key-display.operation{
+.key-display.operation input{
     background-color:blue; 
 }
-.key-display.clean{
+.key-display.clean input{
     background-color:red; 
 }
-.key-display.result{
+.key-display.result input{
     background-color:orange; 
 }
