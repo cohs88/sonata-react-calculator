@@ -4,17 +4,17 @@ class Result extends React.Component {
     constructor(props){
         super(props);
 
-        this.state = { message: 'HELLO' };
+        this.state = { result: 'HELLO' };
     }
     componentDidMount(){
         setTimeout(() => {
-            this.setState({message: 'servando'});
+            this.setState({result: 'servando'});
         }, 30000); // time in milliseconds
     }
     render(){
         return (
             <div>
-                {this.state.message}
+                {this.state.result}
             </div>
         );
     }
