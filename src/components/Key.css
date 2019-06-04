@@ -1,0 +1,15 @@
+.key-display{
+    color:white;
+}
+.key-display.numeric{
+    background-color:green; 
+}
+.key-display.operation{
+    background-color:blue; 
+}
+.key-display.clean{
+    background-color:red; 
+}
+.key-display.result{
+    background-color:orange; 
+}
