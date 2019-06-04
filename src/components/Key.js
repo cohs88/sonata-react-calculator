@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Key = () => {
+const Key = (props) => {
     return (
-        <div>Key</div>
+        <div>{props.text}</div>
     );
 };
 
