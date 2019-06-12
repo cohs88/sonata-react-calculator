@@ -2,20 +2,33 @@ import React from 'react';
 import "./Result.css";
 
 class Result extends React.Component {
-    constructor(props){
-        super(props);
+    state = { result: this.props.result };
 
-        this.state = { result: 'HELLO' };
-    }
     componentDidMount(){
-        setTimeout(() => {
-            this.setState({result: 'servando'});
-        }, 30000); // time in milliseconds
+        this.setState({result: this.props.result});
     }
+
+    componentWillReceiveProps(props){
+        this.setState({result: props.result});
+    }
+
+    componentDidUpdate(){
+    }
+    onInputChange = (event) =>{
+        this.setState({result: 'servando'});
+    };
+    
     render(){
+        console.log('Result.render', this.state.result);
         return (
             <div className="result">
-                <input type="text" value={this.state.result} />
+                {/* {this.state.result} */}
+                <input 
+                    type="text" 
+                    readOnly
+                    value={this.state.result} 
+                    onChange={this.onInputChange}
+                    />
             </div>
         );
     }

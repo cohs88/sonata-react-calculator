@@ -1,27 +1,29 @@
 import React from 'react';
 import "./Key.css";
 
-// const type = {
-//     numeric: {
-//         backgroundColor: "green"
-//     },
-//     operation:{
-//         backgroundColor: "blue"
-//     },
-//     clean:{
-//         backgroundColor: "red"
-//     },
-//     result:{
-//         backgroundColor: "orange"
-//     }
-// };
+class Key extends React.Component {
+    state = {value: '', type: ''};
 
-const Key = (props) => {
-    return (
-        <div className={`key-display ${props.type}`}>
-            <input type="button" value={props.text} />
-        </div>
-    );
+    onClickEvent = (event) => {
+        // event.preventDefault();
+
+        this.props.onKeyClick(this.props.text);
+    }
+
+    render(){
+        
+        return (
+            <div className={`key-display ${this.props.type}`}>
+            
+                <input 
+                    type="button" 
+                    value={this.props.text} 
+                    onClick={this.onClickEvent}
+                    />
+            </div>
+        ); 
+    }
+    
 };
 
 export default Key;
